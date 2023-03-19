@@ -14,6 +14,9 @@
 		75898CB729C5F0260098AD7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75898CB629C5F0260098AD7E /* Assets.xcassets */; };
 		75898CBA29C5F0260098AD7E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75898CB829C5F0260098AD7E /* LaunchScreen.storyboard */; };
 		75898CC229C5F6EC0098AD7E /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75898CC129C5F6EC0098AD7E /* AuthViewController.swift */; };
+		75898CC529C712F30098AD7E /* DiskFie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75898CC429C712F30098AD7E /* DiskFie.swift */; };
+		75898CCA29C7363D0098AD7E /* FileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75898CC829C7363D0098AD7E /* FileTableViewCell.swift */; };
+		75898CCB29C7363D0098AD7E /* FileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75898CC929C7363D0098AD7E /* FileTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		75898CB929C5F0260098AD7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		75898CBB29C5F0260098AD7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75898CC129C5F6EC0098AD7E /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		75898CC429C712F30098AD7E /* DiskFie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskFie.swift; sourceTree = "<group>"; };
+		75898CC829C7363D0098AD7E /* FileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileTableViewCell.swift; sourceTree = "<group>"; };
+		75898CC929C7363D0098AD7E /* FileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FileTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +64,43 @@
 		75898CAC29C5F0240098AD7E /* OAuthYandexDemo */ = {
 			isa = PBXGroup;
 			children = (
+				75898CC629C713C80098AD7E /* Views */,
+				75898CC329C712B90098AD7E /* Models */,
 				75898CAD29C5F0240098AD7E /* AppDelegate.swift */,
 				75898CAF29C5F0240098AD7E /* SceneDelegate.swift */,
-				75898CB129C5F0240098AD7E /* ViewController.swift */,
 				75898CB329C5F0240098AD7E /* Main.storyboard */,
 				75898CB629C5F0260098AD7E /* Assets.xcassets */,
 				75898CB829C5F0260098AD7E /* LaunchScreen.storyboard */,
 				75898CBB29C5F0260098AD7E /* Info.plist */,
-				75898CC129C5F6EC0098AD7E /* AuthViewController.swift */,
 			);
 			path = OAuthYandexDemo;
+			sourceTree = "<group>";
+		};
+		75898CC329C712B90098AD7E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				75898CC429C712F30098AD7E /* DiskFie.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		75898CC629C713C80098AD7E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				75898CC729C736230098AD7E /* Cells */,
+				75898CC129C5F6EC0098AD7E /* AuthViewController.swift */,
+				75898CB129C5F0240098AD7E /* ViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		75898CC729C736230098AD7E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				75898CC829C7363D0098AD7E /* FileTableViewCell.swift */,
+				75898CC929C7363D0098AD7E /* FileTableViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,6 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				75898CBA29C5F0260098AD7E /* LaunchScreen.storyboard in Resources */,
+				75898CCB29C7363D0098AD7E /* FileTableViewCell.xib in Resources */,
 				75898CB729C5F0260098AD7E /* Assets.xcassets in Resources */,
 				75898CB529C5F0240098AD7E /* Main.storyboard in Resources */,
 			);
@@ -142,6 +176,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				75898CC229C5F6EC0098AD7E /* AuthViewController.swift in Sources */,
+				75898CCA29C7363D0098AD7E /* FileTableViewCell.swift in Sources */,
+				75898CC529C712F30098AD7E /* DiskFie.swift in Sources */,
 				75898CB229C5F0240098AD7E /* ViewController.swift in Sources */,
 				75898CAE29C5F0240098AD7E /* AppDelegate.swift in Sources */,
 				75898CB029C5F0240098AD7E /* SceneDelegate.swift in Sources */,
