@@ -8,8 +8,6 @@
 import UIKit
 import WebKit
 
-
-
 class ViewController: UIViewController {
     private let tableView = UITableView()
     private var isFirst = true
@@ -41,8 +39,7 @@ class ViewController: UIViewController {
             tableView.topAnchor.constraint(equalTo: view.topAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)])
     }
-    
-    
+
     private func updateData() {
         guard !token.isEmpty else {
             let requestTokenViewController = AuthViewController()
@@ -51,7 +48,6 @@ class ViewController: UIViewController {
             return
         }
     }
-
 }
 
 extension ViewController : AuthViewControllerDelegate {
@@ -61,4 +57,3 @@ extension ViewController : AuthViewControllerDelegate {
         updateData()
     }
 }
-

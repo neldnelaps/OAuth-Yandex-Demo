@@ -21,7 +21,7 @@ final class AuthViewController : UIViewController{
         super.viewDidLoad()
         setupViews()
         
-        guard let request = request else {return}
+        guard let request = self.request else {return}
         webView.load(request)
         webView.navigationDelegate = self
     }
@@ -45,6 +45,7 @@ final class AuthViewController : UIViewController{
         URLQueryItem(name: "response_type", value: "token"),
         URLQueryItem(name: "client_id", value: "\(clientId)")]
         
+        //https://oauth.yandex.com/authorize?response_type=token&client_id=<id>
         guard let url = urlComponents.url else {return nil}
         return URLRequest(url: url)
     }
@@ -52,8 +53,8 @@ final class AuthViewController : UIViewController{
 
 extension AuthViewController: WKNavigationDelegate {
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
-        if let url = navigationAction.request.url{//,
-          // url.scheme == scheme {
+        if let url = navigationAction.request.url,
+           url.scheme == "myphotos" {
             let targetString =  url.absoluteString.replacingOccurrences(of: "#", with: "?")
             guard let components = URLComponents(string: targetString) else {return}
             let token = components.queryItems?.first(where: {$0.name == "access_token"})?.value
@@ -61,7 +62,7 @@ extension AuthViewController: WKNavigationDelegate {
                 delegate?.handleTokenChanged(token: token)}
             
             dismiss(animated: true, completion: nil)
-            
         }
+        decisionHandler(.allow)
     }
 }
