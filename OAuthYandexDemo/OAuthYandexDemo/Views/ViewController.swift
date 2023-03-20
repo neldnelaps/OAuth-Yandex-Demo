@@ -40,6 +40,9 @@ class ViewController: UIViewController {
         view.backgroundColor =  .white
         title = "Мои фото"
         
+        let addNewFile = UIBarButtonItem(title: "Add", style: .done, target: self, action: #selector(uploadFile))
+        self.navigationItem.rightBarButtonItem = addNewFile
+        
         tableView.dataSource = self
         tableView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(tableView)
@@ -48,6 +51,29 @@ class ViewController: UIViewController {
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             tableView.topAnchor.constraint(equalTo: view.topAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)])
+    }
+    
+    @objc private func uploadFile(){
+        var components = URLComponents(string: "https://cloud-api.yandex.net/v1/disk/resources/upload")
+        components?.queryItems = [
+            URLQueryItem(name: "url", value: "https://imgv3.fotor.com/images/blog-cover-image/part-blurry-image.jpg"),
+            URLQueryItem(name: "path", value: "item")
+        ]
+        guard let url = components?.url else {return}
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.setValue("OAuth \(token)", forHTTPHeaderField: "Authorization")
+        URLSession.shared.dataTask(with: request){ [weak self] (data, response, error) in
+            if let response = response as? HTTPURLResponse{
+                switch response.statusCode {
+                case 200..<300:
+                    print("Success")
+                    self?.updateData()
+                default:
+                    print("Status: \(response.statusCode)")
+                }
+            }
+        }.resume()
     }
 
     private func updateData() {
@@ -59,7 +85,10 @@ class ViewController: UIViewController {
         }
         
         var components = URLComponents(string: "https://cloud-api.yandex.net/v1/disk/resources/files")
-        components?.queryItems = [URLQueryItem(name: "media_type", value: "image")]
+        components?.queryItems = [
+            URLQueryItem(name: "media_type", value: "image"),
+            URLQueryItem(name: "limit", value: "1000")]
+        
         guard let url = components?.url else {return}
         var request = URLRequest(url: url)
         request.setValue("OAuth \(token)", forHTTPHeaderField: "Authorization")
