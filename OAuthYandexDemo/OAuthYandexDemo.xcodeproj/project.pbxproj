@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A77C50F8589D224C0CE9F76 /* Pods_OAuthYandexDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2600B0618D162AFD10DACC9 /* Pods_OAuthYandexDemo.framework */; };
 		75898CAE29C5F0240098AD7E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75898CAD29C5F0240098AD7E /* AppDelegate.swift */; };
 		75898CB029C5F0240098AD7E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75898CAF29C5F0240098AD7E /* SceneDelegate.swift */; };
-		75898CB229C5F0240098AD7E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75898CB129C5F0240098AD7E /* ViewController.swift */; };
+		75898CB229C5F0240098AD7E /* FilesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75898CB129C5F0240098AD7E /* FilesViewController.swift */; };
 		75898CB529C5F0240098AD7E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75898CB329C5F0240098AD7E /* Main.storyboard */; };
 		75898CB729C5F0260098AD7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75898CB629C5F0260098AD7E /* Assets.xcassets */; };
 		75898CBA29C5F0260098AD7E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75898CB829C5F0260098AD7E /* LaunchScreen.storyboard */; };
@@ -17,13 +18,17 @@
 		75898CC529C712F30098AD7E /* DiskFie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75898CC429C712F30098AD7E /* DiskFie.swift */; };
 		75898CCA29C7363D0098AD7E /* FileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75898CC829C7363D0098AD7E /* FileTableViewCell.swift */; };
 		75898CCB29C7363D0098AD7E /* FileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75898CC929C7363D0098AD7E /* FileTableViewCell.xib */; };
+		758BB6AF29C8884E007C3FFB /* ClientAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758BB6AE29C8884E007C3FFB /* ClientAPI.swift */; };
+		758BB6B129C88B7E007C3FFB /* FilesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758BB6B029C88B7E007C3FFB /* FilesViewModel.swift */; };
+		758BB6B329C88FE4007C3FFB /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758BB6B229C88FE4007C3FFB /* AuthViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4DC1FC4629C458E064D23734 /* Pods-OAuthYandexDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OAuthYandexDemo.debug.xcconfig"; path = "Target Support Files/Pods-OAuthYandexDemo/Pods-OAuthYandexDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		75898CAA29C5F0240098AD7E /* OAuthYandexDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OAuthYandexDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75898CAD29C5F0240098AD7E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		75898CAF29C5F0240098AD7E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		75898CB129C5F0240098AD7E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		75898CB129C5F0240098AD7E /* FilesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesViewController.swift; sourceTree = "<group>"; };
 		75898CB429C5F0240098AD7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		75898CB629C5F0260098AD7E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75898CB929C5F0260098AD7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -32,6 +37,11 @@
 		75898CC429C712F30098AD7E /* DiskFie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskFie.swift; sourceTree = "<group>"; };
 		75898CC829C7363D0098AD7E /* FileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileTableViewCell.swift; sourceTree = "<group>"; };
 		75898CC929C7363D0098AD7E /* FileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FileTableViewCell.xib; sourceTree = "<group>"; };
+		758BB6AE29C8884E007C3FFB /* ClientAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientAPI.swift; sourceTree = "<group>"; };
+		758BB6B029C88B7E007C3FFB /* FilesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesViewModel.swift; sourceTree = "<group>"; };
+		758BB6B229C88FE4007C3FFB /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		EB0C2FC716487C7AE6539638 /* Pods-OAuthYandexDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OAuthYandexDemo.release.xcconfig"; path = "Target Support Files/Pods-OAuthYandexDemo/Pods-OAuthYandexDemo.release.xcconfig"; sourceTree = "<group>"; };
+		F2600B0618D162AFD10DACC9 /* Pods_OAuthYandexDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OAuthYandexDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A77C50F8589D224C0CE9F76 /* Pods_OAuthYandexDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +61,8 @@
 			children = (
 				75898CAC29C5F0240098AD7E /* OAuthYandexDemo */,
 				75898CAB29C5F0240098AD7E /* Products */,
+				EE9C9BBC88CF5AB342BA7178 /* Pods */,
+				F2C82EBB66EBC1097B072FC2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +77,8 @@
 		75898CAC29C5F0240098AD7E /* OAuthYandexDemo */ = {
 			isa = PBXGroup;
 			children = (
+				758BB6AD29C8883D007C3FFB /* API */,
+				75898CCC29C87B250098AD7E /* ViewModels */,
 				75898CC629C713C80098AD7E /* Views */,
 				75898CC329C712B90098AD7E /* Models */,
 				75898CAD29C5F0240098AD7E /* AppDelegate.swift */,
@@ -89,7 +104,7 @@
 			children = (
 				75898CC729C736230098AD7E /* Cells */,
 				75898CC129C5F6EC0098AD7E /* AuthViewController.swift */,
-				75898CB129C5F0240098AD7E /* ViewController.swift */,
+				75898CB129C5F0240098AD7E /* FilesViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -103,6 +118,40 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		75898CCC29C87B250098AD7E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				758BB6B029C88B7E007C3FFB /* FilesViewModel.swift */,
+				758BB6B229C88FE4007C3FFB /* AuthViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		758BB6AD29C8883D007C3FFB /* API */ = {
+			isa = PBXGroup;
+			children = (
+				758BB6AE29C8884E007C3FFB /* ClientAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		EE9C9BBC88CF5AB342BA7178 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4DC1FC4629C458E064D23734 /* Pods-OAuthYandexDemo.debug.xcconfig */,
+				EB0C2FC716487C7AE6539638 /* Pods-OAuthYandexDemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F2C82EBB66EBC1097B072FC2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F2600B0618D162AFD10DACC9 /* Pods_OAuthYandexDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -110,9 +159,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 75898CBE29C5F0260098AD7E /* Build configuration list for PBXNativeTarget "OAuthYandexDemo" */;
 			buildPhases = (
+				65BF7ADDB73BF14CD9182055 /* [CP] Check Pods Manifest.lock */,
 				75898CA629C5F0240098AD7E /* Sources */,
 				75898CA729C5F0240098AD7E /* Frameworks */,
 				75898CA829C5F0240098AD7E /* Resources */,
+				4AFA0D2B53BDD0E4FDCD47B5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -170,6 +221,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4AFA0D2B53BDD0E4FDCD47B5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OAuthYandexDemo/Pods-OAuthYandexDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OAuthYandexDemo/Pods-OAuthYandexDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OAuthYandexDemo/Pods-OAuthYandexDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		65BF7ADDB73BF14CD9182055 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OAuthYandexDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		75898CA629C5F0240098AD7E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -177,10 +270,13 @@
 			files = (
 				75898CC229C5F6EC0098AD7E /* AuthViewController.swift in Sources */,
 				75898CCA29C7363D0098AD7E /* FileTableViewCell.swift in Sources */,
+				758BB6AF29C8884E007C3FFB /* ClientAPI.swift in Sources */,
 				75898CC529C712F30098AD7E /* DiskFie.swift in Sources */,
-				75898CB229C5F0240098AD7E /* ViewController.swift in Sources */,
+				75898CB229C5F0240098AD7E /* FilesViewController.swift in Sources */,
 				75898CAE29C5F0240098AD7E /* AppDelegate.swift in Sources */,
+				758BB6B129C88B7E007C3FFB /* FilesViewModel.swift in Sources */,
 				75898CB029C5F0240098AD7E /* SceneDelegate.swift in Sources */,
+				758BB6B329C88FE4007C3FFB /* AuthViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +418,7 @@
 		};
 		75898CBF29C5F0260098AD7E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DC1FC4629C458E064D23734 /* Pods-OAuthYandexDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -349,6 +446,7 @@
 		};
 		75898CC029C5F0260098AD7E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB0C2FC716487C7AE6539638 /* Pods-OAuthYandexDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

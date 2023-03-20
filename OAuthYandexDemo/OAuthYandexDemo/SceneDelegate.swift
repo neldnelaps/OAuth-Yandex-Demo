@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: sceneWindow)
         self.window = window
         let nav = UINavigationController()
-        let vc = ViewController(nibName: nil, bundle: nil)
+        let vc = FilesViewController(nibName: nil, bundle: nil)
         nav.viewControllers = [vc]
         window.rootViewController = nav
         window.makeKeyAndVisible()
