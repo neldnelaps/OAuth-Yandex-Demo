@@ -93,19 +93,27 @@ extension ViewController : UITableViewDataSource {
         guard let items = filesData?.items, items.count > indexPath.row else {return cell}
         let currentItem = items[indexPath.row]
         
-        guard let url = URL(string: currentItem.preview!) else {return cell}
+        cell.delegate = self
+        cell.delegate?.loadImage(stringUrl: currentItem.preview!, completion: { image in
+            cell.fileImageView.image = image
+        })
+        cell.nameLabel?.text = currentItem.name
+        cell.sizeLabel.text = ByteCountFormatter.string(fromByteCount: currentItem.size!, countStyle: .file)
+        return cell
+    }
+}
+
+extension ViewController : FileTableViewCellDelegate{
+    func loadImage(stringUrl: String, completion: @escaping ((UIImage?) -> Void)) {
+        guard let url = URL(string: stringUrl) else {return}
         var request = URLRequest(url: url)
         request.setValue("OAuth \(token)", forHTTPHeaderField: "Authorization")
         let task = URLSession.shared.dataTask(with: request){ [weak self] (data, response, error) in
             guard let data = data else {return}
             DispatchQueue.main.async {
-                cell.imageView?.image = UIImage(data: data)
+                completion(UIImage(data: data))
             }
         }
         task.resume()
-        
-        cell.nameLabel?.text = currentItem.name
-        cell.sizeLabel.text = ByteCountFormatter.string(fromByteCount: currentItem.size!, countStyle: .file)
-        return cell
     }
 }

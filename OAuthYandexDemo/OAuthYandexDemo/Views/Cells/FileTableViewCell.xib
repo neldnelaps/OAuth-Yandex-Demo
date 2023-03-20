@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -18,23 +17,25 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xRh-hk-Hws">
-                        <rect key="frame" x="8" y="8" width="304" height="84"/>
+                        <rect key="frame" x="16" y="16" width="288" height="68"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IUo-tS-PVX">
-                                <rect key="frame" x="0.0" y="0.0" width="84" height="84"/>
+                                <rect key="frame" x="0.0" y="0.0" width="68" height="68"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="84" id="Veu-ED-HVC"/>
-                                    <constraint firstAttribute="height" constant="84" id="lqa-Xr-BdY"/>
+                                    <constraint firstAttribute="width" secondItem="IUo-tS-PVX" secondAttribute="height" multiplier="1:1" id="9U6-No-rxm"/>
+                                    <constraint firstAttribute="width" constant="68" id="Veu-ED-HVC"/>
+                                    <constraint firstAttribute="height" constant="68" id="lqa-Xr-BdY"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ouq-aC-o0p">
-                                <rect key="frame" x="100" y="8" width="196" height="47"/>
+                                <rect key="frame" x="84" y="8" width="196" height="31"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8up-eX-Vpq">
-                                <rect key="frame" x="100" y="63" width="196" height="21"/>
+                                <rect key="frame" x="84" y="47" width="196" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="moc-JG-vMQ"/>
                                 </constraints>
@@ -43,7 +44,6 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="8up-eX-Vpq" secondAttribute="bottom" id="5F1-RQ-iKv"/>
                             <constraint firstItem="IUo-tS-PVX" firstAttribute="leading" secondItem="xRh-hk-Hws" secondAttribute="leading" id="9Tt-EA-Y9L"/>
@@ -59,10 +59,10 @@
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="xRh-hk-Hws" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="R8O-Ht-1GZ"/>
-                    <constraint firstAttribute="trailing" secondItem="xRh-hk-Hws" secondAttribute="trailing" constant="8" id="SBl-ng-j4u"/>
-                    <constraint firstAttribute="bottom" secondItem="xRh-hk-Hws" secondAttribute="bottom" constant="8" id="Wry-Si-nFf"/>
-                    <constraint firstItem="xRh-hk-Hws" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="qHE-RD-X2v"/>
+                    <constraint firstItem="xRh-hk-Hws" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="R8O-Ht-1GZ"/>
+                    <constraint firstAttribute="trailing" secondItem="xRh-hk-Hws" secondAttribute="trailing" constant="16" id="SBl-ng-j4u"/>
+                    <constraint firstAttribute="bottom" secondItem="xRh-hk-Hws" secondAttribute="bottom" constant="16" id="Wry-Si-nFf"/>
+                    <constraint firstItem="xRh-hk-Hws" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="qHE-RD-X2v"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -74,9 +74,4 @@
             <point key="canvasLocation" x="-60" y="20"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>
